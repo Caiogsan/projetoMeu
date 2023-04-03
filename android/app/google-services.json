@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063115699808",
+    "project_id": "projeto-caio-4e57f",
+    "storage_bucket": "projeto-caio-4e57f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063115699808:android:651e66595dc9520b37b505",
+        "android_client_info": {
+          "package_name": "com.example.teste5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063115699808-3lq74slp1rrfd3dma0a5asor96fm8isg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwnCuZpvMD6lSQtguVOdhJbKbbHXleaO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063115699808-3lq74slp1rrfd3dma0a5asor96fm8isg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

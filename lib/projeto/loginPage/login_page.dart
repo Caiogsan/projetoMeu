@@ -1,9 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:teste5/projeto/loginPage/login_functions.dart';
+import 'package:teste5/projeto/loginPage/login_widgets.dart';
 import 'package:teste5/projeto/registerPage/register_page.dart';
 
 import '../HomePage/homePage_page.dart';
+
+TextEditingController emailController = TextEditingController();
+TextEditingController senhaController = TextEditingController();
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,34 +20,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailController = TextEditingController();
-    TextEditingController senhaController = TextEditingController();
-
     final altura = MediaQuery.of(context).size.height;
     final largura = MediaQuery.of(context).size.width;
-    final _firebaseAuth = FirebaseAuth.instance;
-
-    login() async {
-      try {
-        UserCredential userCredential =
-            await _firebaseAuth.signInWithEmailAndPassword(
-                email: emailController.text, password: senhaController.text);
-        if (UserCredential != null) {
-          // ignore: use_build_context_synchronously
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => const HomePage()));
-        }
-      } on FirebaseException catch (e) {
-        if (e.code == 'user-not-found') {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text('Usuario não encontrado')));
-        } else if (e.code == 'wrong-password') {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text('Senha incorreta')));
-        }
-      }
-      ;
-    }
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -75,63 +54,76 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: altura * 0.07,
                     ),
-                    Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              width: 2,
-                              color: const Color.fromARGB(255, 49, 219, 52),
-                            )),
-                        width: largura * 0.75,
-                        height: altura * 0.05,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: largura * 0.03),
-                          child: TextField(
-                            controller: emailController,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                                color: Color.fromRGBO(181, 181, 181, 0.7)),
-                            decoration: const InputDecoration(
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                hintText: 'Email',
-                                hintStyle: TextStyle(
-                                    fontSize: 15,
-                                    color: Color.fromRGBO(228, 216, 216, 0.7))),
-                          ),
-                        )),
-                    SizedBox(
-                      height: altura * 0.03,
+                    // Container(
+                    //     decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(15),
+                    //         border: Border.all(
+                    //           width: 2,
+                    //           color: const Color.fromARGB(255, 49, 219, 52),
+                    //         )),
+                    //     width: largura * 0.75,
+                    //     height: altura * 0.05,
+                    //     child: Padding(
+                    //       padding: EdgeInsets.only(left: largura * 0.03),
+                    //       child: TextField(
+                    //         controller: emailController,
+                    //         textAlign: TextAlign.center,
+                    //         style: const TextStyle(
+                    //             fontWeight: FontWeight.w500,
+                    //             fontSize: 16,
+                    //             color: Color.fromRGBO(181, 181, 181, 0.7)),
+                    //         decoration: const InputDecoration(
+                    //             enabledBorder: InputBorder.none,
+                    //             focusedBorder: InputBorder.none,
+                    //             hintText: 'Email',
+                    //             hintStyle: TextStyle(
+                    //                 fontSize: 15,
+                    //                 color: Color.fromRGBO(228, 216, 216, 0.7))),
+                    //       ),
+                    //     )),
+
+                    TextFieldCustom(
+                      controlador: emailController,
+                      obscureText: false,
+                      hintText: 'Email',
                     ),
-                    Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              width: 2,
-                              color: const Color.fromARGB(255, 49, 219, 52),
-                            )),
-                        width: largura * 0.75,
-                        height: altura * 0.05,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: largura * 0.03),
-                          child: TextField(
-                            controller: senhaController,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                                color: Color.fromRGBO(181, 181, 181, 0.7)),
-                            decoration: const InputDecoration(
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                hintText: 'Senha',
-                                hintStyle: TextStyle(
-                                    fontSize: 15,
-                                    color: Color.fromRGBO(228, 216, 216, 0.7))),
-                          ),
-                        )),
+                    SizedBox(
+                      height: altura * .03,
+                    ),
+                    TextFieldCustom(
+                      controlador: senhaController,
+                      obscureText: true,
+                      hintText: 'Senha',
+                    ),
+
+                    // Container(
+                    //     decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(15),
+                    //         border: Border.all(
+                    //           width: 2,
+                    //           color: const Color.fromARGB(255, 49, 219, 52),
+                    //         )),
+                    //     width: largura * 0.75,
+                    //     height: altura * 0.05,
+                    //     child: Padding(
+                    //       padding: EdgeInsets.only(left: largura * 0.03),
+                    //       child: TextField(
+                    //         obscureText: true,
+                    //         controller: senhaController,
+                    //         textAlign: TextAlign.center,
+                    //         style: const TextStyle(
+                    //             fontWeight: FontWeight.w500,
+                    //             fontSize: 16,
+                    //             color: Color.fromRGBO(181, 181, 181, 0.7)),
+                    //         decoration: const InputDecoration(
+                    //             enabledBorder: InputBorder.none,
+                    //             focusedBorder: InputBorder.none,
+                    //             hintText: 'Senha',
+                    //             hintStyle: TextStyle(
+                    //                 fontSize: 15,
+                    //                 color: Color.fromRGBO(228, 216, 216, 0.7))),
+                    //       ),
+                    //     )),
                     SizedBox(
                       height: altura * 0.05,
                     ),
@@ -139,8 +131,8 @@ class _LoginPageState extends State<LoginPage> {
                         width: largura * 0.6,
                         height: altura * 0.05,
                         child: ElevatedButton(
-                          onPressed: () {
-                            login();
+                          onPressed: () async {
+                            await LoginFunctions(context).login();
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black87,
@@ -176,6 +168,42 @@ class _LoginPageState extends State<LoginPage> {
             ),
           );
         },
+      ),
+    );
+  }
+}
+
+class LoginPage2 extends StatefulWidget {
+  const LoginPage2({super.key});
+
+  @override
+  State<LoginPage2> createState() => _LoginPage2State();
+}
+
+class _LoginPage2State extends State<LoginPage2> {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Container(
+        height: size.height,
+        width: size.width,
+        color: Colors.green,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Stack(
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: size.width * 0.85,
+                  height: size.height * .8,
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

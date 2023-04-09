@@ -1,7 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class TextFieldCustom extends StatefulWidget {
   bool obscureText;
@@ -52,12 +50,12 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
                       }
                     },
                     icon: widget.hintText == 'Senha'
-                        ? Icon(Icons.remove_red_eye)
+                        ? const Icon(Icons.remove_red_eye)
                         : Container()),
                 enabledBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
                 hintText: widget.hintText,
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                     fontSize: 15, color: Color.fromRGBO(228, 216, 216, 0.7))),
           ),
         ));

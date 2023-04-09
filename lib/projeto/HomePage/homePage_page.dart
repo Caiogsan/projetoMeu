@@ -7,9 +7,14 @@ import 'package:teste5/projeto/HomePage/homepage_widgets.dart';
 
 import 'package:teste5/projeto/all_json_files/json.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final largura = MediaQuery.of(context).size.width;

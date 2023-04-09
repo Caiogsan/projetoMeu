@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                                       builder: (context) =>
                                           const RegisterPage()));
                             },
-                            child: Text(
+                            child: const Text(
                               'Cadastrar',
                               style: TextStyle(
                                   fontSize: 10, fontWeight: FontWeight.w800),

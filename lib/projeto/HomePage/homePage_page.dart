@@ -1,14 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:http/http.dart' as http;
+
 import 'package:teste5/globals/globals.dart';
-import 'package:teste5/projeto/Alimentacao/alimentacao_page.dart';
+
 import 'package:teste5/projeto/HomePage/homepage_functions.dart';
 import 'package:teste5/projeto/HomePage/homepage_widgets.dart';
-import 'package:teste5/projeto/Treinamento/treinamentos_page.dart';
+
 import 'package:teste5/projeto/all_json_files/json.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,8 +17,8 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(230, 228, 228, 0.8),
-        title: Center(
+        backgroundColor: const Color.fromRGBO(230, 228, 228, 0.8),
+        title: const Center(
             child: Text(
           'MINHAS COISAS',
           style: TextStyle(color: Colors.black),

@@ -32,7 +32,7 @@ class _HomePageLoginState extends State<HomePageLogin> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: LoginPage(),
+      body: HomePage(),
       resizeToAvoidBottomInset: false,
     );
   }

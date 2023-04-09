@@ -1,11 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:teste5/projeto/loginPage/login_functions.dart';
 import 'package:teste5/projeto/loginPage/login_widgets.dart';
 import 'package:teste5/projeto/registerPage/register_page.dart';
-
-import '../HomePage/homePage_page.dart';
 
 TextEditingController emailController = TextEditingController();
 TextEditingController senhaController = TextEditingController();

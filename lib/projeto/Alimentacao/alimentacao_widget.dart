@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
 
 class AlimentacaoWidget extends StatelessWidget {
   const AlimentacaoWidget({super.key});
@@ -132,7 +133,10 @@ class AlimentacaoWidget2 extends StatelessWidget {
           children: [
             GestureDetector(
                 onTap: () {
-                  print('Café');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CafePage()),
+                  );
                 },
                 child: const Center(
                   child: Material(

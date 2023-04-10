@@ -1,0 +1,96 @@
+
+
+{
+    "json-home": [
+        {
+            "titulo": "Treinamento"
+        },
+        {
+            "titulo": "Alimentação"
+        },
+        {
+            "titulo": "Trabalho"
+        },
+        {
+            "titulo": "Estudos"
+        }
+    ],
+    "json-cafe-comida": [
+        {
+            "Alimentos": "Maçã",
+            "Calorias": 53,
+            "Proteinas": 0.26,
+            "Carboidratos": 13.81,
+            "Gorduras": 0.17
+        },
+        {
+            "Alimentos": "Banana",
+            "Calorias": 99,
+            "Proteinas": 1.30,
+            "Carboidratos": 25.8,
+            "Gorduras": 0.30
+        },
+        {
+            "Alimentos": "Laranja",
+            "Calorias": 63,
+            "Proteinas": 1.30,
+            "Carboidratos": 15.5,
+            "Gorduras": 0.30
+        },
+        {
+            "Alimentos": "Pão Francês",
+            "Calorias": 300,
+            "Proteinas": 8,
+            "Carboidratos": 58.6,
+            "Gorduras": 3.1
+        },
+        {
+            "Alimentos": "Pão de Forma",
+            "Calorias": 250,
+            "Proteinas": 7.8,
+            "Carboidratos": 48,
+            "Gorduras": 3
+        },
+        {
+            "Alimentos": "Pão Integral",
+            "Calorias": 242,
+            "Proteinas": 8.6,
+            "Carboidratos": 44,
+            "Gorduras": 3.6
+        },
+        
+        {
+            "Alimentos": "Ovo Frito",
+            "Calorias": 240,
+            "Proteinas": 15.6,
+            "Carboidratos": 1.2,
+            "Gorduras": 18.6
+        },
+        {
+            "Alimentos": "Morango",
+            "Calorias": 30,
+            "Proteinas": 0.9,
+            "Carboidratos": 6.8,
+            "Gorduras": 0.3
+        }
+        
+    ],
+    "json-cafe-bebida": [
+        
+        {
+            "Alimentos": "Leite",
+            "Calorias": 60,
+            "Proteinas": 3,
+            "Carboidratos": 4.8,
+            "Gorduras": 3.2
+        },
+        
+        {
+            "Alimentos": "Shake de Whey",
+            "Calorias": 125,
+            "Proteinas": 25,
+            "Carboidratos": 2,
+            "Gorduras": 0.5
+        }
+    ]
+}

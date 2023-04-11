@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:teste5/projeto/Alimentacao/Almoco/almoco_page.dart';
 import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
 
 class AlimentacaoWidget extends StatelessWidget {
@@ -161,25 +162,31 @@ class AlimentacaoWidget2 extends StatelessWidget {
               width: largura * 0.12,
             ),
             GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AlmocoPage()),
+                  );
+                },
                 child: const Center(
-              child: Material(
-                  elevation: 20,
-                  shape: CircleBorder(),
-                  clipBehavior: Clip.antiAlias,
-                  child: CircleAvatar(
-                    maxRadius: 60.0,
-                    backgroundImage: AssetImage('assets/2.png'),
-                    child: Center(
-                      child: Text(
-                        'Almoço',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20),
-                      ),
-                    ),
-                  )),
-            )),
+                  child: Material(
+                      elevation: 20,
+                      shape: CircleBorder(),
+                      clipBehavior: Clip.antiAlias,
+                      child: CircleAvatar(
+                        maxRadius: 60.0,
+                        backgroundImage: AssetImage('assets/2.png'),
+                        child: Center(
+                          child: Text(
+                            'Almoço',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20),
+                          ),
+                        ),
+                      )),
+                )),
           ],
         ),
         SizedBox(

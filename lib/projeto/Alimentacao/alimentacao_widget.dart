@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:teste5/projeto/Alimentacao/Almoco/almoco_page.dart';
 import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
+import 'package:teste5/projeto/Alimentacao/Configs/configs_page.dart';
 
 class AlimentacaoWidget extends StatelessWidget {
   const AlimentacaoWidget({super.key});
@@ -147,15 +148,6 @@ class AlimentacaoWidget2 extends StatelessWidget {
                       child: CircleAvatar(
                         maxRadius: 70.0,
                         backgroundImage: AssetImage('assets/1.png'),
-                        child: Center(
-                          child: Text(
-                            'Café',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20),
-                          ),
-                        ),
                       )),
                 )),
             SizedBox(
@@ -176,15 +168,6 @@ class AlimentacaoWidget2 extends StatelessWidget {
                       child: CircleAvatar(
                         maxRadius: 60.0,
                         backgroundImage: AssetImage('assets/2.png'),
-                        child: Center(
-                          child: Text(
-                            'Almoço',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20),
-                          ),
-                        ),
                       )),
                 )),
           ],
@@ -196,25 +179,26 @@ class AlimentacaoWidget2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-                child: const Center(
-              child: Material(
-                  elevation: 20,
-                  shape: CircleBorder(),
-                  clipBehavior: Clip.antiAlias,
-                  child: CircleAvatar(
-                    maxRadius: 60.0,
-                    backgroundImage: AssetImage('assets/3.png'),
-                    child: Center(
-                      child: Text(
-                        'Janta',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20),
-                      ),
-                    ),
-                  )),
-            )),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ConfigsPage()),
+                  );
+                },
+                child: Center(
+                  child: Material(
+                      elevation: 20,
+                      shape: CircleBorder(),
+                      clipBehavior: Clip.antiAlias,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: largura * 0.003),
+                        child: CircleAvatar(
+                          maxRadius: 60.0,
+                          backgroundImage: AssetImage('assets/5.png'),
+                        ),
+                      )),
+                )),
             SizedBox(
               width: largura * 0.12,
             ),
@@ -227,15 +211,6 @@ class AlimentacaoWidget2 extends StatelessWidget {
                   child: CircleAvatar(
                     maxRadius: 70.0,
                     backgroundImage: AssetImage('assets/4.png'),
-                    child: Center(
-                      child: Text(
-                        'Sobremesas',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20),
-                      ),
-                    ),
                   )),
             )),
           ],

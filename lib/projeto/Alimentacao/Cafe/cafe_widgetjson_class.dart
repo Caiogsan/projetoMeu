@@ -1,6 +1,6 @@
 class JsonCafeComida {
   String? alimentos;
-  int? calorias;
+  var calorias;
   var proteinas;
   var carboidratos;
   var gorduras;
@@ -16,7 +16,7 @@ class JsonCafeComida {
 
 class JsonCafeBebida {
   String? alimentos;
-  int? calorias;
+  var calorias;
   var proteinas;
   var carboidratos;
   var gorduras;

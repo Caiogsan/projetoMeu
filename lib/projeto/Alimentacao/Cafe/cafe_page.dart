@@ -11,17 +11,6 @@ import 'package:teste5/projeto/Alimentacao/Cafe/cafe_widgetjson_class.dart';
 
 import 'cafe_functions.dart';
 
-class Item {
-  String headerText;
-  String expandedText;
-  bool isExpanded;
-  Item({
-    required this.headerText,
-    required this.expandedText,
-    this.isExpanded = false,
-  });
-}
-
 class CafePage extends StatefulWidget {
   const CafePage({super.key});
 

@@ -92,5 +92,314 @@
             "Carboidratos": 2,
             "Gorduras": 0.5
         }
+    ],
+    "json-almoco-comida": [
+        {
+            "Alimentos":"Arroz",
+            "Calorias": 128,
+            "Proteinas": 2.5,
+            "Carboidratos": 28.1,
+            "Gorduras": 0.2
+        },
+        {
+            "Alimentos": "Feijão",
+            "Calorias": 76,
+            "Proteinas": 4.8,
+            "Carboidratos": 13.6,
+            "Gorduras": 0.5
+        },
+        {
+            "Alimentos":"Batata",
+            "Calorias":64,
+            "Proteinas": 1.65,
+            "Carboidratos": 14.59,
+            "Gorduras":0.08
+        },
+        {
+            "Alimentos":"File Mignon Carne Bovina S/ gordura",
+            "Calorias":220,
+            "Proteinas":32.8,
+            "Carboidratos":0,
+            "Gorduras":8.8
+        },
+        {
+            "Alimentos":"Picanha",
+            "Calorias":213,
+            "Proteinas":18.8,
+            "Carboidratos":0,
+            "Gorduras":14.7
+        },
+        {
+            "Alimentos":"Coxão Mole de Carne Bovina",
+            "Calorias":169,
+            "Proteinas":21.2,
+            "Carboidratos":0,
+            "Gorduras":8.7
+        },
+        {
+            "Alimentos":"Contrafilé",
+            "Calorias":194,
+            "Proteinas":35.9,
+            "Carboidratos":0,
+            "Gorduras":4.5
+        },
+        {
+            "Alimentos":"Patinho Grelhado",
+            "Calorias":219,
+            "Proteinas":35.9,
+            "Carboidratos":0,
+            "Gorduras":7.3
+        },
+        {
+            "Alimentos":"Miolo de Alcatra",
+            "Calorias":241,
+            "Proteinas":31.9,
+            "Carboidratos":0,
+            "Gorduras":11.6
+        },
+        {
+            "Alimentos":"Costela de Carne Bovina Assada",
+            "Calorias":373,
+            "Proteinas":28.8,
+            "Carboidratos":0,
+            "Gorduras":27.7
+        },
+        {
+            "Alimentos":"Coxão Duro de Carne Bovina",
+            "Calorias":217,
+            "Proteinas":31.9,
+            "Carboidratos":0,
+            "Gorduras":8.9
+        },
+        {
+            "Alimentos":"Fraldinha de Carne Bovina",
+            "Calorias":199,
+            "Proteinas":36.12,
+            "Carboidratos":0,
+            "Gorduras":5
+        },
+        {
+            "Alimentos":"Peito de Frango",
+            "Calorias":163,
+            "Proteinas":31.5,
+            "Carboidratos":0,
+            "Gorduras":3.2
+        },
+        {
+            "Alimentos":"Sobrecoxa de Frango Assado",
+            "Calorias":233,
+            "Proteinas":29.2,
+            "Carboidratos":0,
+            "Gorduras":12
+        },
+        {
+            "Alimentos":"Coxa de Frango Assado",
+            "Calorias":172,
+            "Proteinas":28.3,
+            "Carboidratos":0,
+            "Gorduras":5.66
+        },
+        {
+            "Alimentos":"Asa de Frango",
+            "Calorias":203,
+            "Proteinas":30.46,
+            "Carboidratos":0,
+            "Gorduras":8.13
+        },
+        {
+            "Alimentos":"Filé de Tilápia",
+            "Calorias":96,
+            "Proteinas":20.1,
+            "Carboidratos":0,
+            "Gorduras":1.7
+        },
+        {
+            "Alimentos":"Peixe Corvina",
+            "Calorias":147,
+            "Proteinas":26.8,
+            "Carboidratos":0,
+            "Gorduras":3.6
+        },
+        {
+            "Alimentos":"Peixe Salmão",
+            "Calorias":170,
+            "Proteinas":19.3,
+            "Carboidratos":0,
+            "Gorduras":9.7
+        },
+        {
+            "Alimentos":"Filé de Anchova",
+            "Calorias":130,
+            "Proteinas":20.35,
+            "Carboidratos":0,
+            "Gorduras":4.84
+        },
+        {
+            "Alimentos":"Fricasse de Frango",
+            "Calorias":132,
+            "Proteinas":11.9,
+            "Carboidratos":3.4,
+            "Gorduras":7.5
+        },
+        {
+            "Alimentos":"Espaguete",
+            "Calorias":360,
+            "Proteinas":11,
+            "Carboidratos":76.25,
+            "Gorduras":1
+        },
+        {
+            "Alimentos":"Talharim",
+            "Calorias":286,
+            "Proteinas":7.9,
+            "Carboidratos":59,
+            "Gorduras":2.1
+        },
+        {
+            "Alimentos":"Macarrão Penne",
+            "Calorias":350,
+            "Proteinas":12.5,
+            "Carboidratos":73.75,
+            "Gorduras":1.25
+        },
+        
+        {
+            "Alimentos":"Macarrão Fusili 80g",
+            "Calorias":280,
+            "Proteinas":9.6,
+            "Carboidratos":56.8,
+            "Gorduras":1.6
+        },
+        {
+            "Alimentos":"Macarrão Pappardelle 80g",
+            "Calorias":288,
+            "Proteinas":8.8,
+            "Carboidratos":64,
+            "Gorduras":0.8
+        },
+        {
+            "Alimentos":"Macarrão Fettuccine 80g",
+            "Calorias":280,
+            "Proteinas":9.6,
+            "Carboidratos":56.8,
+            "Gorduras":1.6
+        },
+        {
+            "Alimentos":"Macarrão Linguine 80g",
+            "Calorias":280,
+            "Proteinas":9.6,
+            "Carboidratos":56.8,
+            "Gorduras":1.6
+        },
+        {
+            "Alimentos":"Almondegas",
+            "Calorias":272,
+            "Proteinas":18.20,
+            "Carboidratos":14.30,
+            "Gorduras":15.80
+        },
+        {
+            "Alimentos":"Bacalhau Salgado Refogado",
+            "Calorias":140,
+            "Proteinas":24,
+            "Carboidratos":1.2,
+            "Gorduras":3.6
+        },
+        {
+            "Alimentos":"Atum",
+            "Calorias":110.9,
+            "Proteinas":25.7,
+            "Carboidratos":0,
+            "Gorduras":0.9
+        },
+        {
+            "Alimentos":"Sardinha",
+            "Calorias":114,
+            "Proteinas":21.1,
+            "Carboidratos":0,
+            "Gorduras":2.7
+        },
+        {
+            "Alimentos":"Batata Frita",
+            "Calorias":280,
+            "Proteinas":4.3,
+            "Carboidratos":36,
+            "Gorduras":13.2
+        },
+        {
+            "Alimentos":"Batata Palha",
+            "Calorias":552,
+            "Proteinas":45,
+            "Carboidratos":48,
+            "Gorduras":40
+        },
+        {
+            "Alimentos":"Purê de Batata",
+            "Calorias":115,
+            "Proteinas":1.8,
+            "Carboidratos":17.7,
+            "Gorduras":4.3
+        },
+        {
+            "Alimentos":"Lasanha de Carne",
+            "Calorias":209,
+            "Proteinas":15.4,
+            "Carboidratos":15.8,
+            "Gorduras":9.3
+        },
+        
+        {
+            "Alimentos":"Panqueca de Carne",
+            "Calorias":286,
+            "Proteinas":17.6,
+            "Carboidratos":22,
+            "Gorduras":14.13
+        },
+        
+        {
+            "Alimentos":"Omelete",
+            "Calorias":171,
+            "Proteinas":11.7,
+            "Carboidratos":1.1,
+            "Gorduras":12.97
+        },
+        {
+            "Alimentos":"Arroz de Forno a Parmegiana",
+            "Calorias":260,
+            "Proteinas":10,
+            "Carboidratos":12,
+            "Gorduras":15
+        },
+        {
+            "Alimentos":"Beterraba",
+            "Calorias":49,
+            "Proteinas":1.9,
+            "Carboidratos":11.1,
+            "Gorduras":0.1
+        },
+        {
+            "Alimentos":"Alface",
+            "Calorias":11,
+            "Proteinas":1.3,
+            "Carboidratos":1.7,
+            "Gorduras":0.2
+        },
+        {
+            "Alimentos":"Cenoura",
+            "Calorias":34,
+            "Proteinas":1.3,
+            "Carboidratos":7.7,
+            "Gorduras":0.2
+        },
+        {
+            "Alimentos":"Batata Doce",
+            "Calorias":77,
+            "Proteinas":0.6,
+            "Carboidratos":18.4,
+            "Gorduras":0.1
+        }
+
+
+
     ]
 }

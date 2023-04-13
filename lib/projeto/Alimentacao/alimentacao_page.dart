@@ -48,7 +48,9 @@ class _AlimentacaoPageState extends State<AlimentacaoPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-            color: Color.fromARGB(115, 39, 41, 78),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/7.png"), fit: BoxFit.cover)),
             width: largura * 1,
             height: altura,
             child: AlimentacaoWidget()),

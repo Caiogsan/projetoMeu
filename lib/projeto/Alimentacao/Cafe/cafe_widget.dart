@@ -17,9 +17,17 @@ class Item {
   });
 }
 
-class CafeWidget extends StatelessWidget {
+class CafeWidget extends StatefulWidget {
   const CafeWidget({super.key});
 
+  @override
+  State<CafeWidget> createState() => _CafeWidgetState();
+}
+
+class _CafeWidgetState extends State<CafeWidget> {
+  List alimentosProteina = [];
+  List alimentosCarbo = [];
+  List alimentosGordura = [];
   @override
   Widget build(BuildContext context) {
     final largura = MediaQuery.of(context).size.width;
@@ -98,7 +106,18 @@ class CafeWidget extends StatelessWidget {
                                               Container(
                                                 height: altura * 0.027,
                                                 child: ElevatedButton(
-                                                    onPressed: () {},
+                                                    onPressed: () {
+                                                      alimentosProteina
+                                                          .add(info.proteinas);
+                                                      alimentosCarbo.add(
+                                                          info.carboidratos);
+                                                      alimentosGordura.add(
+                                                          alimentosGordura);
+                                                      setState(() {
+                                                        print(
+                                                            alimentosProteina);
+                                                      });
+                                                    },
                                                     child: Text('Confirma')),
                                               )
                                             ],

@@ -12,55 +12,62 @@ class AlimentacaoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: altura * .02,
-        ),
-        const Text(
-          'Quantidade Maxima',
-          style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600),
-        ),
-        SizedBox(
-          height: altura * .032,
-        ),
-        Stack(children: [
-          Container(
-            margin: EdgeInsets.fromLTRB(largura * .099, altura * .05, 0, 0),
-            height: altura * .21,
-            width: largura * .4,
-            child: const CircularProgressIndicator(
-              color: Colors.green,
-              value: 1,
-              strokeWidth: 15,
-              backgroundColor: Color.fromARGB(146, 189, 188, 188),
-            ),
-          ),
-          Container(
-              margin: EdgeInsets.fromLTRB(largura * .049, altura * .025, 0, 0),
-              height: altura * .26,
-              width: largura * .5,
-              child: const CircularProgressIndicator(
-                strokeWidth: 15,
-                value: 1,
-              )),
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
           SizedBox(
-              height: altura * .31,
-              width: largura * .6,
-              child: const CircularProgressIndicator(
-                strokeWidth: 15,
-                value: .5,
-                backgroundColor: Colors.red,
-                color: Colors.red,
-              )),
+            height: altura * .02,
+          ),
           const Text(
-            'Kcal:',
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )
-        ]),
-        const AlimentacaoWidget2()
-      ],
+            'Sua Informação',
+            style: TextStyle(
+                color: Colors.black, fontSize: 19, fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: altura * .032,
+          ),
+          Stack(children: [
+            Container(
+              margin: EdgeInsets.fromLTRB(largura * .099, altura * .05, 0, 0),
+              height: altura * .21,
+              width: largura * .4,
+              child: const CircularProgressIndicator(
+                color: Colors.green,
+                value: 1,
+                strokeWidth: 15,
+                backgroundColor: Color.fromARGB(146, 189, 188, 188),
+              ),
+            ),
+            Container(
+                margin:
+                    EdgeInsets.fromLTRB(largura * .049, altura * .025, 0, 0),
+                height: altura * .26,
+                width: largura * .5,
+                child: const CircularProgressIndicator(
+                  strokeWidth: 15,
+                  value: 1,
+                )),
+            SizedBox(
+                height: altura * .31,
+                width: largura * .6,
+                child: const CircularProgressIndicator(
+                  strokeWidth: 15,
+                  value: .5,
+                  backgroundColor: Colors.red,
+                  color: Colors.red,
+                )),
+            const Text(
+              'Kcal:',
+              style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 12),
+            )
+          ]),
+          const AlimentacaoWidget2()
+        ],
+      ),
     );
   }
 }
@@ -92,7 +99,10 @@ class AlimentacaoWidget2 extends StatelessWidget {
                 SizedBox(
                   width: largura * 0.02,
                 ),
-                const Text('Proteinas'),
+                const Text(
+                  'Proteinas',
+                  style: TextStyle(color: Colors.black),
+                ),
               ],
             ),
             Row(

@@ -1,7 +1,10 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
 import 'package:teste5/projeto/Alimentacao/Cafe/cafe_widget.dart';
+import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 
 import '../Cafe/cafe_functions.dart';
 import '../Cafe/cafe_widgetjson_class.dart';
@@ -129,8 +132,22 @@ class AlmocoPage2 extends StatelessWidget {
   }
 }
 
-class AlmocoAlimento extends StatelessWidget {
+class AlmocoAlimento extends StatefulWidget {
   const AlmocoAlimento({super.key});
+
+  @override
+  State<AlmocoAlimento> createState() => _AlmocoAlimentoState();
+}
+
+class _AlmocoAlimentoState extends State<AlmocoAlimento> {
+  late ControllerStore controllerStore;
+
+  @override
+  void didChangeDependencies() {
+    controllerStore = Provider.of<ControllerStore>(context, listen: false);
+
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -207,12 +224,24 @@ class AlmocoAlimento extends StatelessWidget {
                                               SizedBox(
                                                 height: altura * 0.04,
                                               ),
-                                              Container(
-                                                height: altura * 0.027,
-                                                child: ElevatedButton(
-                                                    onPressed: () {},
-                                                    child: Text('Confirma')),
-                                              )
+                                              Observer(builder: (_) {
+                                                return Container(
+                                                  height: altura * 0.027,
+                                                  child: ElevatedButton(
+                                                      onPressed: () {
+                                                        controllerStore
+                                                            .incrementProteina(
+                                                                info.proteinas);
+                                                        controllerStore
+                                                            .incrementCarbo(info
+                                                                .carboidratos);
+                                                        controllerStore
+                                                            .incrementGordura(
+                                                                info.gorduras);
+                                                      },
+                                                      child: Text('Confirma')),
+                                                );
+                                              })
                                             ],
                                           ),
                                           SizedBox(

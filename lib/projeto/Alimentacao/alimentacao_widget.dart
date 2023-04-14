@@ -1,15 +1,33 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
 import 'package:teste5/projeto/Alimentacao/Almoco/almoco_page.dart';
 import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
 import 'package:teste5/projeto/Alimentacao/Configs/configs_page.dart';
+import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 
-class AlimentacaoWidget extends StatelessWidget {
-  const AlimentacaoWidget({super.key});
+class AlimentacaoWidget extends StatefulWidget {
+  AlimentacaoWidget({super.key});
+
+  @override
+  State<AlimentacaoWidget> createState() => _AlimentacaoWidgetState();
+}
+
+class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
+  late ControllerStore controllerStore;
+  late ControllerStore controllerStoreT;
+  @override
+  void didChangeDependencies() {
+    controllerStore = Provider.of<ControllerStore>(context, listen: false);
+    controllerStoreT = Provider.of<ControllerStore>(context, listen: true);
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
+    print(controllerStoreT.countProteina);
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Container(
@@ -27,44 +45,61 @@ class AlimentacaoWidget extends StatelessWidget {
           SizedBox(
             height: altura * .032,
           ),
-          Stack(children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(largura * .099, altura * .05, 0, 0),
-              height: altura * .21,
-              width: largura * .4,
-              child: const CircularProgressIndicator(
-                color: Colors.green,
-                value: 1,
-                strokeWidth: 15,
-                backgroundColor: Color.fromARGB(146, 189, 188, 188),
+          Observer(builder: (_) {
+            return Stack(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: altura * 0.14),
+                    child: Text(
+                      'KCAL',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                    ),
+                  ),
+                ],
               ),
-            ),
-            Container(
-                margin:
-                    EdgeInsets.fromLTRB(largura * .049, altura * .025, 0, 0),
-                height: altura * .26,
-                width: largura * .5,
-                child: const CircularProgressIndicator(
-                  strokeWidth: 15,
-                  value: 1,
-                )),
-            SizedBox(
-                height: altura * .31,
-                width: largura * .6,
-                child: const CircularProgressIndicator(
-                  strokeWidth: 15,
-                  value: .5,
-                  backgroundColor: Colors.red,
-                  color: Colors.red,
-                )),
-            const Text(
-              'Kcal:',
-              style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  fontSize: 12),
-            )
-          ]),
+              Padding(
+                padding: EdgeInsets.only(left: largura * 0.2),
+                child: Stack(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(
+                          largura * .099, altura * .05, 0, 0),
+                      height: altura * .21,
+                      width: largura * .4,
+                      child: CircularProgressIndicator(
+                        color: Colors.green,
+                        value: controllerStoreT.countGordura.toDouble() / 60,
+                        strokeWidth: 15,
+                        backgroundColor: Color.fromARGB(146, 140, 240, 131),
+                      ),
+                    ),
+                    Container(
+                        margin: EdgeInsets.fromLTRB(
+                            largura * .049, altura * .025, 0, 0),
+                        height: altura * .26,
+                        width: largura * .5,
+                        child: CircularProgressIndicator(
+                            backgroundColor: Color.fromARGB(146, 146, 148, 241),
+                            strokeWidth: 15,
+                            value: controllerStoreT.countProteina.toDouble() /
+                                160)),
+                    SizedBox(
+                        height: altura * .31,
+                        width: largura * .6,
+                        child: CircularProgressIndicator(
+                          backgroundColor: Color.fromARGB(146, 245, 149, 149),
+                          strokeWidth: 15,
+                          value: controllerStoreT.countCarbo.toDouble() / 160,
+                          color: Colors.red,
+                        )),
+                  ],
+                ),
+              )
+            ]);
+          }),
           const AlimentacaoWidget2()
         ],
       ),

@@ -2,8 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
 import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
+import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 
 import 'cafe_functions.dart';
 import 'cafe_widgetjson_class.dart';
@@ -25,6 +27,15 @@ class CafeWidget extends StatefulWidget {
 }
 
 class _CafeWidgetState extends State<CafeWidget> {
+  late ControllerStore controllerStore;
+
+  @override
+  void didChangeDependencies() {
+    controllerStore = Provider.of<ControllerStore>(context, listen: false);
+
+    super.didChangeDependencies();
+  }
+
   List alimentosProteina = [];
   List alimentosCarbo = [];
   List alimentosGordura = [];
@@ -62,9 +73,7 @@ class _CafeWidgetState extends State<CafeWidget> {
                           final List<Item> items = [
                             Item(
                                 header: info.alimentos.toString(),
-                                body: Column(
-                                  children: [Text('asdwd')],
-                                ))
+                                body: SizedBox())
                           ];
 
                           return ExpansionPanelList.radio(
@@ -103,23 +112,27 @@ class _CafeWidgetState extends State<CafeWidget> {
                                               SizedBox(
                                                 height: altura * 0.04,
                                               ),
-                                              Container(
-                                                height: altura * 0.027,
-                                                child: ElevatedButton(
-                                                    onPressed: () {
-                                                      alimentosProteina
-                                                          .add(info.proteinas);
-                                                      alimentosCarbo.add(
-                                                          info.carboidratos);
-                                                      alimentosGordura.add(
-                                                          alimentosGordura);
-                                                      setState(() {
-                                                        print(
-                                                            alimentosProteina);
-                                                      });
-                                                    },
-                                                    child: Text('Confirma')),
-                                              )
+                                              Observer(builder: (_) {
+                                                return SizedBox(
+                                                  height: altura * 0.027,
+                                                  child: ElevatedButton(
+                                                      onPressed: () {
+                                                        controllerStore
+                                                            .incrementProteina(
+                                                                info.proteinas);
+                                                        controllerStore
+                                                            .incrementCarbo(info
+                                                                .carboidratos);
+                                                        controllerStore
+                                                            .incrementGordura(
+                                                                info.gorduras);
+                                                        print(controllerStore
+                                                            .countGordura);
+                                                      },
+                                                      child: const Text(
+                                                          'Confirma')),
+                                                );
+                                              })
                                             ],
                                           ),
                                           SizedBox(

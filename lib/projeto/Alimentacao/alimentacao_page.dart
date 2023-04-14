@@ -46,15 +46,13 @@ class _AlimentacaoPageState extends State<AlimentacaoPage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/7.png"), fit: BoxFit.cover)),
-            width: largura * 1,
-            height: altura,
-            child: AlimentacaoWidget()),
-      ),
+      body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/7.png"), fit: BoxFit.cover)),
+          width: largura * 1,
+          height: altura,
+          child: AlimentacaoWidget()),
     );
   }
 }

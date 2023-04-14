@@ -27,12 +27,12 @@ class CircularProgressIndic extends StatelessWidget {
           ShaderMask(
               shaderCallback: (rect) {
                 return SweepGradient(stops: [
-                  .1,
                   .2,
+                  .4,
                 ], colors: [
                   Colors.blue,
                   Colors.grey.withAlpha(55)
-                ], startAngle: 0, endAngle: 3.14 * 2, center: Alignment.center)
+                ], startAngle: 0, endAngle: 5, center: Alignment.center)
                     .createShader(rect);
               },
               child: Container(

@@ -30,7 +30,7 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
     print(controllerStoreT.countProteina);
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -51,48 +51,49 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: altura * 0.14),
-                    child: Text(
-                      'KCAL',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                    padding: EdgeInsets.only(top: altura * 0.13),
+                    child: Center(
+                      child: Text(
+                        controllerStoreT.countCalorias.toString(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 20),
+                      ),
                     ),
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(left: largura * 0.2),
+              Center(
                 child: Stack(
                   children: [
                     Container(
                       margin: EdgeInsets.fromLTRB(
-                          largura * .099, altura * .05, 0, 0),
-                      height: altura * .21,
-                      width: largura * .4,
+                          largura * .111, altura * .057, 0, 0),
+                      height: altura * .18,
+                      width: altura * .18,
                       child: CircularProgressIndicator(
                         color: Colors.green,
-                        value: controllerStoreT.countGordura.toDouble() / 60,
+                        value: controllerStoreT.countGordura.toDouble() / 80,
                         strokeWidth: 15,
                         backgroundColor: Color.fromARGB(146, 140, 240, 131),
                       ),
                     ),
                     Container(
                         margin: EdgeInsets.fromLTRB(
-                            largura * .049, altura * .025, 0, 0),
-                        height: altura * .26,
-                        width: largura * .5,
+                            largura * .052, altura * .027, 0, 0),
+                        height: altura * .24,
+                        width: altura * .24,
                         child: CircularProgressIndicator(
                             backgroundColor: Color.fromARGB(146, 146, 148, 241),
                             strokeWidth: 15,
                             value: controllerStoreT.countProteina.toDouble() /
-                                160)),
+                                200)),
                     SizedBox(
-                        height: altura * .31,
-                        width: largura * .6,
+                        height: altura * .295,
+                        width: altura * .295,
                         child: CircularProgressIndicator(
                           backgroundColor: Color.fromARGB(146, 245, 149, 149),
                           strokeWidth: 15,
-                          value: controllerStoreT.countCarbo.toDouble() / 160,
+                          value: controllerStoreT.countCarbo.toDouble() / 300,
                           color: Colors.red,
                         )),
                   ],

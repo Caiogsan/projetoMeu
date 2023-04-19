@@ -11,6 +11,8 @@ abstract class _ControllerStoreBase with Store {
   num countCarbo = 0;
   @observable
   num countGordura = 0;
+  @observable
+  num countCalorias = 0;
 
   @action
   incrementProteina(qtdProteina) {
@@ -20,6 +22,11 @@ abstract class _ControllerStoreBase with Store {
   @action
   incrementCarbo(qtdCarbo) {
     countCarbo += qtdCarbo;
+  }
+
+  @action
+  incrementCalorias(qtdCaloria) {
+    countCalorias += qtdCaloria;
   }
 
   @action

@@ -238,6 +238,9 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
                                                         controllerStore
                                                             .incrementGordura(
                                                                 info.gorduras);
+                                                        controllerStore
+                                                            .incrementCalorias(
+                                                                info.calorias);
                                                       },
                                                       child: Text('Confirma')),
                                                 );

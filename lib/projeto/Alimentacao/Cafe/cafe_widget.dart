@@ -126,8 +126,9 @@ class _CafeWidgetState extends State<CafeWidget> {
                                                         controllerStore
                                                             .incrementGordura(
                                                                 info.gorduras);
-                                                        print(controllerStore
-                                                            .countGordura);
+                                                        controllerStore
+                                                            .incrementCalorias(
+                                                                info.calorias);
                                                       },
                                                       child: const Text(
                                                           'Confirma')),

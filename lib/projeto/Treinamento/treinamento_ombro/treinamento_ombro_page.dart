@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 import 'package:teste5/projeto/Treinamento/treinamento_ombro/treinamento_ombro_function.dart';
 
@@ -11,7 +9,6 @@ class TreinamentoOmbro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
@@ -31,7 +28,7 @@ class TreinamentoOmbro extends StatelessWidget {
                       }),
                 );
               }
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }),
       ),
     );

@@ -20,13 +20,13 @@ class CircularProgressIndic extends StatelessWidget {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Center(
-      child: Container(
+      child: SizedBox(
         height: altura * .26,
         width: largura * .5,
         child: Stack(children: [
           ShaderMask(
               shaderCallback: (rect) {
-                return SweepGradient(stops: [
+                return SweepGradient(stops: const [
                   .2,
                   .4,
                 ], colors: [
@@ -38,15 +38,15 @@ class CircularProgressIndic extends StatelessWidget {
               child: Container(
                 width: altura * .5,
                 height: altura * .26,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: Colors.white),
               )),
           Center(
             child: Container(
               width: 160,
               height: 160,
-              decoration:
-                  BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+              decoration: const BoxDecoration(
+                  color: Colors.white, shape: BoxShape.circle),
             ),
           )
         ]),

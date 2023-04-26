@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ConfigsPage extends StatefulWidget {
   const ConfigsPage({super.key});
@@ -14,7 +12,7 @@ class _ConfigsPageState extends State<ConfigsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Configurações'),
+        title: const Text('Configurações'),
       ),
     );
   }

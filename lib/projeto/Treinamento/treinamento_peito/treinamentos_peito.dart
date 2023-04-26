@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:teste5/projeto/Alimentacao/alimentacao_widget.dart';
+
 import 'package:teste5/projeto/Treinamento/treinamento_peito/treinamentos_peito_functions.dart';
 import 'package:teste5/projeto/Treinamento/treinamento_peito/treinamentos_peito_jsonclass.dart';
 
@@ -12,7 +10,6 @@ class TreinamentoPeito extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
@@ -32,7 +29,7 @@ class TreinamentoPeito extends StatelessWidget {
                       }),
                 );
               }
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }),
       ),
     );

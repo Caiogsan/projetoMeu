@@ -1,6 +1,5 @@
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 import 'package:teste5/projeto/Alimentacao/Almoco/almoco_page.dart';
@@ -9,7 +8,7 @@ import 'package:teste5/projeto/Alimentacao/Configs/configs_page.dart';
 import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 
 class AlimentacaoWidget extends StatefulWidget {
-  AlimentacaoWidget({super.key});
+  const AlimentacaoWidget({super.key});
 
   @override
   State<AlimentacaoWidget> createState() => _AlimentacaoWidgetState();
@@ -27,7 +26,6 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    print(controllerStoreT.countProteina);
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
@@ -55,7 +53,7 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
                     child: Center(
                       child: Text(
                         controllerStoreT.countCalorias.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.w600, fontSize: 20),
                       ),
                     ),
@@ -74,7 +72,8 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
                         color: Colors.green,
                         value: controllerStoreT.countGordura.toDouble() / 80,
                         strokeWidth: 15,
-                        backgroundColor: Color.fromARGB(146, 140, 240, 131),
+                        backgroundColor:
+                            const Color.fromARGB(146, 140, 240, 131),
                       ),
                     ),
                     Container(
@@ -83,7 +82,8 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
                         height: altura * .24,
                         width: altura * .24,
                         child: CircularProgressIndicator(
-                            backgroundColor: Color.fromARGB(146, 146, 148, 241),
+                            backgroundColor:
+                                const Color.fromARGB(146, 146, 148, 241),
                             strokeWidth: 15,
                             value: controllerStoreT.countProteina.toDouble() /
                                 200)),
@@ -91,7 +91,8 @@ class _AlimentacaoWidgetState extends State<AlimentacaoWidget> {
                         height: altura * .295,
                         width: altura * .295,
                         child: CircularProgressIndicator(
-                          backgroundColor: Color.fromARGB(146, 245, 149, 149),
+                          backgroundColor:
+                              const Color.fromARGB(146, 245, 149, 149),
                           strokeWidth: 15,
                           value: controllerStoreT.countCarbo.toDouble() / 300,
                           color: Colors.red,
@@ -235,11 +236,11 @@ class AlimentacaoWidget2 extends StatelessWidget {
                 child: Center(
                   child: Material(
                       elevation: 20,
-                      shape: CircleBorder(),
+                      shape: const CircleBorder(),
                       clipBehavior: Clip.antiAlias,
                       child: Padding(
                         padding: EdgeInsets.only(right: largura * 0.003),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           maxRadius: 60.0,
                           backgroundImage: AssetImage('assets/5.png'),
                         ),

@@ -1,10 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:teste5/projeto/Alimentacao/Cafe/cafe_page.dart';
+
 import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 
 import 'cafe_functions.dart';
@@ -73,7 +72,7 @@ class _CafeWidgetState extends State<CafeWidget> {
                           final List<Item> items = [
                             Item(
                                 header: info.alimentos.toString(),
-                                body: SizedBox())
+                                body: const SizedBox())
                           ];
 
                           return ExpansionPanelList.radio(
@@ -181,7 +180,7 @@ class _CafeWidgetState extends State<CafeWidget> {
           SizedBox(
             height: altura * 0.06,
           ),
-          CafeWidgetBebidas()
+          const CafeWidgetBebidas()
         ],
       ),
     );
@@ -221,7 +220,7 @@ class CafeWidgetBebidas extends StatelessWidget {
                         Item(
                             header: info.alimentos.toString(),
                             body: Column(
-                              children: [Text('asdwd')],
+                              children: const [Text('asdwd')],
                             ))
                       ];
 
@@ -259,11 +258,11 @@ class CafeWidgetBebidas extends StatelessWidget {
                                           SizedBox(
                                             height: altura * 0.04,
                                           ),
-                                          Container(
+                                          SizedBox(
                                             height: altura * 0.027,
                                             child: ElevatedButton(
                                                 onPressed: () {},
-                                                child: Text('Confirma')),
+                                                child: const Text('Confirma')),
                                           )
                                         ],
                                       ),

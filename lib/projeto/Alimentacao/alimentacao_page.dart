@@ -47,12 +47,12 @@ class _AlimentacaoPageState extends State<AlimentacaoPage> {
         ],
       ),
       body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/7.png"), fit: BoxFit.cover)),
           width: largura * 1,
           height: altura,
-          child: AlimentacaoWidget()),
+          child: const AlimentacaoWidget()),
     );
   }
 }

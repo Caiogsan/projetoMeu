@@ -8,7 +8,8 @@ class TreinamentoWidgets {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Container(
-      decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
+      decoration:
+          const BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: GestureDetector(
@@ -21,7 +22,8 @@ class TreinamentoWidgets {
               ),
               Text(
                 titulo,
-                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
               )
             ],
           ),
@@ -30,16 +32,47 @@ class TreinamentoWidgets {
     );
   }
 
-  Widget botaoAdicionarTreino() {
+  Widget cardOpcoes(String titulo, String subtitulo) {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
-    return Container(
-      height: altura * 0.08,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-      child: ElevatedButton(
-          style: ElevatedButton.styleFrom(elevation: 5, shape: CircleBorder()),
-          onPressed: () {},
-          child: Icon(Icons.add)),
+    return GestureDetector(
+      child: Material(
+        elevation: 10,
+        borderRadius: const BorderRadius.all(Radius.circular(25)),
+        child: Container(
+          height: altura * 0.17,
+          width: largura * 0.4,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              image: const DecorationImage(
+                  image: AssetImage('assets/10.png'), fit: BoxFit.cover)),
+          child: Padding(
+            padding: EdgeInsets.only(left: largura * 0.05),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  titulo,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                SizedBox(
+                  height: altura * 0.01,
+                ),
+                Text(
+                  subtitulo,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                SizedBox(
+                  height: altura * 0.01,
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -47,7 +80,8 @@ class TreinamentoWidgets {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return Container(
-      decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
+      decoration:
+          const BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: GestureDetector(
@@ -61,11 +95,12 @@ class TreinamentoWidgets {
               Expanded(
                 child: Text(
                   titulo,
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 17),
                 ),
               ),
               InkWell(
-                child: Icon(
+                child: const Icon(
                   Icons.add,
                   size: 25.0,
                 ),

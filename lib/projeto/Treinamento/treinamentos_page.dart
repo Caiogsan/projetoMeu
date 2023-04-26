@@ -21,18 +21,18 @@ class TreinamentosPage extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   border: Border.fromBorderSide(BorderSide(width: 1))),
               width: largura * 1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {}, child: Text('Grupo de Musculos')),
+                      onPressed: () {}, child: const Text('Grupo de Musculos')),
                   SizedBox(
                     width: largura * 0.08,
                   ),
-                  TextButton(onPressed: () {}, child: Text('Musculos'))
+                  TextButton(onPressed: () {}, child: const Text('Musculos'))
                 ],
               ),
             ),
@@ -103,9 +103,22 @@ class TreinamentosPage extends StatelessWidget {
                   );
                 }),
                 SizedBox(
-                  height: altura * 0.12,
+                  height: altura * 0.045,
                 ),
-                TreinamentoWidgets(context).botaoAdicionarTreino()
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      TreinamentoWidgets(context).cardOpcoes('Meus', 'Treinos'),
+                      SizedBox(
+                        width: largura * 0.08,
+                      ),
+                      TreinamentoWidgets(context)
+                          .cardOpcoes('Treinos', 'Prontos'),
+                    ],
+                  ),
+                )
               ],
             )
           ],

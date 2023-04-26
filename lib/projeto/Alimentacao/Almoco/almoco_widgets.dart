@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +41,7 @@ class AlmocoPage2 extends StatelessWidget {
                         Item(
                             header: info.alimentos.toString(),
                             body: Column(
-                              children: [Text('asdwd')],
+                              children: const [Text('asdwd')],
                             ))
                       ];
 
@@ -81,11 +79,11 @@ class AlmocoPage2 extends StatelessWidget {
                                           SizedBox(
                                             height: altura * 0.04,
                                           ),
-                                          Container(
+                                          SizedBox(
                                             height: altura * 0.027,
                                             child: ElevatedButton(
                                                 onPressed: () {},
-                                                child: Text('Confirma')),
+                                                child: const Text('Confirma')),
                                           )
                                         ],
                                       ),
@@ -184,7 +182,7 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
                             Item(
                                 header: info.alimentos.toString(),
                                 body: Column(
-                                  children: [Text('asdwd')],
+                                  children: const [Text('asdwd')],
                                 ))
                           ];
 
@@ -225,7 +223,7 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
                                                 height: altura * 0.04,
                                               ),
                                               Observer(builder: (_) {
-                                                return Container(
+                                                return SizedBox(
                                                   height: altura * 0.027,
                                                   child: ElevatedButton(
                                                       onPressed: () {
@@ -242,7 +240,8 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
                                                             .incrementCalorias(
                                                                 info.calorias);
                                                       },
-                                                      child: Text('Confirma')),
+                                                      child: const Text(
+                                                          'Confirma')),
                                                 );
                                               })
                                             ],
@@ -283,9 +282,7 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
                         itemCount: informac.length,
                       );
                     }
-                    if (snapshot.hasError) {
-                      print(snapshot.error);
-                    }
+                    if (snapshot.hasError) {}
                     return const Center(child: CircularProgressIndicator());
                   },
                 ),
@@ -295,7 +292,7 @@ class _AlmocoAlimentoState extends State<AlmocoAlimento> {
           SizedBox(
             height: altura * 0.05,
           ),
-          AlmocoPage2()
+          const AlmocoPage2()
         ],
       ),
     );

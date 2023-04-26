@@ -656,5 +656,95 @@
             "titulo": "Remada Invertida no Smith"
         }
         
+    ],
+    "json-treinamento-biceps": [
+        {
+            "titulo": "Rosca Direta com Barra"
+        },
+        {
+            "titulo": "Rosca Direta com Halteres"
+        },
+        {
+            "titulo": "Rosca Scott"
+        },
+        {
+            "titulo": "Rosca Martelo"
+        },
+        {
+            "titulo": "Rosca Concentrada"
+        },
+        {
+            "titulo": "Rosca Inversa com Barra"
+        },
+        {
+            "titulo": "Rosca Inversa com Halteres"
+        },
+        {
+            "titulo": "Rosca Scott com Halteres"
+        },
+        {
+            "titulo": "Rosca Simultanea com Halteres"
+        },
+        {
+            "titulo": "Rosca Spider"
+        },
+        {
+            "titulo": "Rosca 21"
+        },
+        {
+            "titulo": "Barra Fixa Supinada"
+        },
+        {
+            "titulo": "Puxada Supinada com Pulley"
+        },
+        {
+            "titulo": "Rosca Testa Polia Alta"
+        },
+        {
+            "titulo": "Bíceps Superman"
+        },
+        {
+            "titulo": "Rosca no Banco Inclinado"
+        },
+        {
+            "titulo": "Rosca Polia Baixa Deitado"
+        },
+        {
+            "titulo": "Rosca no Cross"
+        }
+        
+    ],
+    "json-treinamento-triceps": [
+        {
+            "titulo": "Tríceps Corda"
+        },
+        {
+            "titulo": "Tríceps Testa"
+        },
+        {
+            "titulo": "Tríceps na Polia com Barra(pulley)"
+        },
+        {
+            "titulo": "Tríceps Coice com Halter"
+        },
+        {
+            "titulo": "Tríceps Coice na Polia"
+        },
+        {
+            "titulo": "Tríceps Francês"
+        },
+        {
+            "titulo": "Supino Fechado"
+        },
+        {
+            "titulo": "Flexão de Braços com Pegada Fechada"
+        },
+        {
+            "titulo": "Mergulho no Banco"
+        },
+        {
+            "titulo": "Tríceps em Máquina Paralela"
+        }
+        
     ]
 }

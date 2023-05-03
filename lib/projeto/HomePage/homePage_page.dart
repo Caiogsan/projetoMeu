@@ -21,16 +21,9 @@ class _HomePageState extends State<HomePage> {
     final altura = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(230, 228, 228, 0.8),
-        title: const Center(
-            child: Text(
-          'MINHAS COISAS',
-          style: TextStyle(color: Colors.black),
-        )),
-      ),
       body: Container(
-        color: Colors.black12,
+        decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/background.png'))),
         height: altura * 1,
         width: largura,
         child: FutureBuilder(

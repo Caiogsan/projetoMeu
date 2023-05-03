@@ -16,23 +16,40 @@ class HomeWidget {
       child: Column(
         children: [
           SizedBox(
-            height: altura * 0.11,
+            height: altura * 0.065,
           ),
-          Container(
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 50, 252, 1).withOpacity(0.5),
-                boxShadow: [
-                  BoxShadow(
-                      spreadRadius: 1.5,
-                      blurRadius: 1,
-                      color: Colors.grey.withOpacity(0.5),
-                      offset: const Offset(-2, 2))
-                ],
-                border: Border.all(width: 1),
-                borderRadius: BorderRadius.circular(15)),
-            height: altura * 0.05,
-            width: largura * 0.9,
-            child: Center(child: Text(info.titulo.toString())),
+          Material(
+            elevation: 10,
+            borderRadius: BorderRadius.circular(15),
+            child: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(info.imagem.toString()),
+                      fit: BoxFit.cover),
+                  border: Border.all(width: 1),
+                  borderRadius: BorderRadius.circular(15)),
+              height: altura * 0.14,
+              width: largura * 0.9,
+              child: Container(
+                margin: EdgeInsets.only(right: largura * 0.02),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: largura * 0.02),
+                      child: Text(
+                        info.titulo.toString(),
+                        style: const TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
           SizedBox(
             height: altura * 0.03,

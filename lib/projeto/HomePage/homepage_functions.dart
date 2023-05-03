@@ -33,7 +33,8 @@ class HomePageFunctions {
 
     List<JsonHome> infos = [];
     for (var jsonDesgraca in jsonArray) {
-      JsonHome putaqpariu = JsonHome(titulo: jsonDesgraca['titulo']);
+      JsonHome putaqpariu = JsonHome(
+          titulo: jsonDesgraca['titulo'], imagem: jsonDesgraca['imagem']);
       infos.add(putaqpariu);
     }
 

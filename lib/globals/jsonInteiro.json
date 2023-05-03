@@ -1,16 +1,20 @@
 {
     "json-home": [
         {
-            "titulo": "Treinamento"
+            "titulo": "Treinamento",
+            "imagem":"assets/11.png"
         },
         {
-            "titulo": "Alimentação"
+            "titulo": "Alimentação",
+            "imagem":"assets/12.png"
         },
         {
-            "titulo": "Trabalho"
+            "titulo": "Trabalho",
+            "imagem":"assets/13.png"
         },
         {
-            "titulo": "Estudos"
+            "titulo": "Estudos",
+            "imagem":"assets/15.png"
         }
     ],
     "json-cafe-comida": [
@@ -392,76 +396,87 @@
     ],
     "json-treinamento-peito": [
         {
-            "titulo": "Supino Reto com Barra"
+            "titulo": "Supino Reto com Barra /C/ machuca mt sen /A/"
         },
         {
-            "titulo": "Supino Inclinado com Barra"
+            "titulo": "Supino Inclinado com Barra /C/ machuca mt sen /A/"
         },
         {
-            "titulo": "Supino Declinado com Barra"
+            "titulo": "Supino Declinado com Barra /C/ machuca mt sen /A/"
         },
         {
-            "titulo": "Supino Reto com Halteres"
+            "titulo": "Supino Reto na Maquina /A/"
         },
         {
-            "titulo": "Supino Inclinado com Halteres"
+            "titulo": "Supino Inclinado na Maquina /S/"
+        },
+        
+        {
+            "titulo": "Supino Reto com Halteres /S/"
+        },
+        {
+            "titulo": "Supino Inclinado com Halteres /S/"
         },
         {
             "titulo": "Supino Declinado com Halteres"
         },
         {
-            "titulo": "Supino Fechado"
+            "titulo": "Supino Fechado /C/"
         },
         {
-            "titulo": "Supino com Pegada Neutra"
+            "titulo": "Supino com Pegada Neutra /C/"
         },
         {
             "titulo": "Supino Reto Hammer/Articulado"
         },
         {
-            "titulo": "Crucifixo Inclinado com Halteres"
+            "titulo": "Crucifixo Inclinado com Halteres /C/ sen /A/"
         },
         {
             "titulo": "Crucifixo Declinado com Halteres"
         },
         {
-            "titulo": "Crucifixo no Cross over"
+            "titulo": "Crucifixo no Cross Over"
         },
         {
-            "titulo": "Crucifixo Reto com Halteres"
+            "titulo": "Crucifixo Reto com Halteres /C/ machuca muito sen /A/"
         },
         {
-            "titulo": "Crucifixo no Voador"
+            "titulo": "Crucifixo Maquina /S/"
+        },
+        {
+            "titulo": "Crucifixo Maquina com Cabo /S/"
+        },
+        {
+            "titulo": "Peck Deck /S/ mas n pode ser rotacionado pra tras, lesiona"
         },
         {
             "titulo": "Crucifixo Inclinado com Cabo"
         },
         {
-            "titulo": "Flexão de Braços"
+            "titulo": "Flexão de Braços /A/"
         },
         {
-            "titulo": "Flexão de Braços inclinado"
+            "titulo": "Flexão de Braços inclinado /A/"
         },
         {
-            "titulo": "Flexão de Braços Declinado"
+            "titulo": "Flexão de Braços Declinado /A/"
+        },  
+        {
+            "titulo": "Cross Over /S/"
         },
         {
-            "titulo": "Flexão de Um Braço"
+            "titulo": "Cross Over Cruzando Braços /A/"
         },
         {
-            "titulo": "Cross Over"
+            "titulo": "Cross Over com Polia Baixa /S/"
+        },
+        
+        {
+            "titulo": "Paralelas /C/"
         },
         {
-            "titulo": "Cross Over com Polia Baixa"
-        },
-        {
-            "titulo": "Cross Over com Polia Média"
-        },
-        {
-            "titulo": "Paralelas na Máquina"
-        },
-        {
-            "titulo": "Pull Over com Halteres"
+            "titulo": "Pull Over com Halter /A/"
         }
     ],
     "json-treinamento-perna": [
@@ -659,19 +674,31 @@
     ],
     "json-treinamento-biceps": [
         {
-            "titulo": "Rosca Direta com Barra"
+            "titulo": "Rosca Direta com Barra Reta /A/"
         },
         {
-            "titulo": "Rosca Direta com Halteres"
+            "titulo": "Rosca Direta com Barra W /A/"
         },
         {
-            "titulo": "Rosca Scott"
+            "titulo": "Rosca Direta com Polia Baixa"
+        },
+        {
+            "titulo": "Rosca Direta Simultanea com Halter /S/"
+        },
+        {
+            "titulo": "Rosca Direta Simultanea Rotacionando com Halter /A/"
+        },
+        {
+            "titulo": "Rosca Scott na Maquina /S/"
         },
         {
             "titulo": "Rosca Martelo"
         },
         {
-            "titulo": "Rosca Concentrada"
+            "titulo": "Rosca Martelo Alternada /S/"
+        },
+        {
+            "titulo": "Rosca Concentrada /A/"
         },
         {
             "titulo": "Rosca Inversa com Barra"
@@ -686,7 +713,10 @@
             "titulo": "Rosca Simultanea com Halteres"
         },
         {
-            "titulo": "Rosca Spider"
+            "titulo": "Rosca Alternada com Halteres /A/"
+        },
+        {
+            "titulo": "Rosca Spider /S/"
         },
         {
             "titulo": "Rosca 21"
@@ -701,7 +731,7 @@
             "titulo": "Rosca Testa Polia Alta"
         },
         {
-            "titulo": "Bíceps Superman"
+            "titulo": "Bíceps Superman /A/"
         },
         {
             "titulo": "Rosca no Banco Inclinado"

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'meus_treinos/meus_treinos_page.dart';
+
 class TreinamentoWidgets {
   BuildContext context;
   TreinamentoWidgets(this.context);
@@ -36,6 +38,14 @@ class TreinamentoWidgets {
     final largura = MediaQuery.of(context).size.width;
     final altura = MediaQuery.of(context).size.height;
     return GestureDetector(
+      onTap: () {
+        if (titulo == 'Meus') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const TreinosPage()),
+          );
+        }
+      },
       child: Material(
         elevation: 10,
         borderRadius: const BorderRadius.all(Radius.circular(25)),

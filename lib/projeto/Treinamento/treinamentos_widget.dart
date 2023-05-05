@@ -109,13 +109,41 @@ class TreinamentoWidgets {
                       fontWeight: FontWeight.w600, fontSize: 17),
                 ),
               ),
-              InkWell(
-                child: const Icon(
-                  Icons.add,
-                  size: 25.0,
-                ),
-                onTap: () {},
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget exerciciosMuscularesAdd(
+      String titulo, String imagem, Function()? onTap) {
+    final largura = MediaQuery.of(context).size.width;
+    final altura = MediaQuery.of(context).size.height;
+    return Container(
+      decoration:
+          const BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
+      child: Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: GestureDetector(
+          onTap: onTap,
+          child: Row(
+            children: [
+              SizedBox(height: altura * 0.055, child: Image.asset(imagem)),
+              SizedBox(
+                width: largura * 0.05,
               ),
+              Expanded(
+                child: Text(
+                  titulo,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 17),
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.add),
+              )
             ],
           ),
         ),

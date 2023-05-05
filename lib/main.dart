@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:teste5/projeto/Alimentacao/store/controller_store.dart';
 import 'package:teste5/projeto/HomePage/homePage_page.dart';
+import 'package:teste5/projeto/loginPage/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

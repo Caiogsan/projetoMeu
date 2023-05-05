@@ -19,7 +19,7 @@ class TreinamentoPeito extends StatelessWidget {
               if (snapshot.hasData) {
                 List<JsonExerciciosPeito> informac = snapshot.data!;
                 return SizedBox(
-                  height: altura * 0.9,
+                  height: altura * 1,
                   child: ListView.builder(
                       itemCount: informac.length,
                       itemBuilder: (_, index) {
